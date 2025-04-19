@@ -8,7 +8,7 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.storage.UserStorageProviderFactory;
 
 public class DbUserStorageProviderFactory implements UserStorageProviderFactory<DbUserStorageProvider> {
-    private static final String PROVIDER_ID = "dgpar-user";
+    private static final String PROVIDER_ID = "db-user";
     private static final String PERSISTENCE_UNIT = "user-store";
 
     @Override
