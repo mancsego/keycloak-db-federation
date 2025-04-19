@@ -37,12 +37,12 @@ public class KeycloakUser extends AbstractUserAdapterFederatedStorage {
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getEmail();
     }
 
     @Override
     public void setUsername(String s) {
-        user.setUsername(s);
+        user.setEmail(s);
     }
 
     @Override
@@ -53,16 +53,6 @@ public class KeycloakUser extends AbstractUserAdapterFederatedStorage {
     @Override
     public void setEmail(String email){
         user.setEmail(email);
-    }
-
-    @Override
-    public boolean isEmailVerified() {
-        return user.isEmailVerified();
-    }
-
-    @Override
-    public void setEmailVerified(boolean verified) {
-        user.setEmailVerified(verified);
     }
 
     @Override

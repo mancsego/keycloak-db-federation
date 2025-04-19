@@ -20,7 +20,7 @@ public class UserRepositoryAdapter implements UserRepository {
     }
 
     public Optional<User> findByUsername(String username) {
-        return getByQuery("getUserByUsername", "username", username);
+        return getByQuery("getUserByEmail", "username", username);
     }
 
     public Optional<User> findByEmail(String email) {
@@ -31,9 +31,6 @@ public class UserRepositoryAdapter implements UserRepository {
         return em.createNamedQuery("searchForUser", User.class)
                 .setParameter("search", "%" + search + "%")
                 .getResultStream();
-
-//        return em.createQuery("select c from User c where c.email like '%" + searchParam + "%'", User.class)
-//                .getResultStream();
     }
 
     private Optional<User> getByQuery(String query, String parameter, Object value) {
