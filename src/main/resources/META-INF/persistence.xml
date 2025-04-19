@@ -3,9 +3,9 @@
         <class>mancsego.github.io.entity.User</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://host.docker.internal:3306/db"/>
-            <property name="hibernate.connection.username" value="db_user"/>
-            <property name="hibernate.connection.password" value="test1234"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://host.docker.internal:3306/storage_db"/>
+            <property name="hibernate.connection.username" value="storage_user"/>
+            <property name="hibernate.connection.password" value="storage_password"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.connection.datasource" value="user-store"/>
         </properties>
